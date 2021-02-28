@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Table of Contents
+-----------------------------
+1. Mobile
+2. iPad
+3. large desktop
+4. Other
+*/
+
+/* 1. Mobile responsive css 767px
+-----------------------------------*/
+#mobile-menu{display: none;}
+@media (max-width:767px) {
+
+    body{min-width: inherit;}
+    .container{width: 100%;padding-left: 13px;padding-right: 13px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+    /*----   header   ----*/
+    /* mobile menu */
+    #mobile-menu, #mobile-menu .menu-trigger{display: block;}
+    #mobile-menu .menu-trigger{display: block;width: 40px;height: 40px;position: absolute;-ms-touch-action: manipulation;touch-action: manipulation;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;white-space: nowrap;z-index: 999999;left: 0;top: 0;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;}
+    #mobile-menu .menu-trigger.open{left: calc(100% - 40px);background:#e59aaa}
+    #mobile-menu .menu-trigger span, #mobile-menu .menu-trigger span:after, #mobile-menu .menu-trigger span:before{background: #e59aaa;height: 2px;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;} 
+    #mobile-menu .menu-trigger span{position: absolute;display: block;width: 20px;left: 50%;top: 50%;transform: translate(-50% , -50%);-webkit-transform: translate(-50% , -50%);-moz-transform: translate(-50% , -50%)}
+    #mobile-menu .menu-trigger span:after, #mobile-menu .menu-trigger span:before{content: '';position: absolute;left: 0;width: 100%;}
+    #mobile-menu .menu-trigger span:before{top: -6px;}
+    #mobile-menu .menu-trigger span:after{bottom: -6px;}
+    #mobile-menu .menu-trigger.open span{background-color: rgba(0,0,0,.0)}
+    #mobile-menu .menu-trigger.open span:before{top: 0;transform: rotate(45deg);-webkit-transform: rotate(45deg);background: rgba(72, 72, 69, 0.85)}
+    #mobile-menu .menu-trigger.open span:after{top: 0;transform: rotate(-45deg);-webkit-transform: rotate(-45deg);background: rgba(72, 72, 69, 0.85)}
+    #mobile-menu .navbar{background:rgba(72, 72, 69, 0.85);position: fixed;top: 0;width: calc(100% - 40px);height: 100%;left: -100%;box-sizing: border-box;z-index: 99999;overflow-y: auto;-webkit-overflow-scrolling: touch;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;margin-right: 40px;}
+    #mobile-menu .navbar.open{left: 0;}
+    #mobile-menu  ul ul{display: none;background:rgb(60, 60, 56);}
+    #mobile-menu  ul ul ul{background:rgb(71, 71, 68)}
+    #mobile-menu  ul ul ul ul{background:rgb(60, 60, 56)}
+    #mobile-menu  li{border-bottom:1px solid rgba(174, 146, 97, 0.14);list-style: none;position: relative;display: block;margin: 0;}
+    #mobile-menu  li:last-child{border-bottom-width: 0;padding-bottom: 0;}
+    #mobile-menu  em{display: block;position: absolute;top: 0;right: 0;width: 30px;height: 39px;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;}
+    #mobile-menu  em:before, #mobile-menu  em:after{content: '';position: absolute;top:50%;margin-top: -1px;left: calc(50% - 8px);width: 16px;height: 2px;background: #fff;}
+    #mobile-menu  em:after{transform: rotate(-90deg);-moz-transform: rotate(-90deg);-webkit-transform: rotate(-90deg);-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;}
+    #mobile-menu  em.toggled:after{transform: rotate(0);-moz-transform: rotate(0);-webkit-transform: rotate(0);}
+    #mobile-menu  em.level-two:before{content: '';position: absolute;width: 0;height: 0;border-style: solid;border-width: 6px 6px 0 6px;border-color: #fff transparent transparent transparent;background-color: transparent;left: 50%;top: 50%;transform: translate(-50% , -50%);-webkit-transform: translate(-50% , -50%);-moz-transform: translate(-50% , -50%);margin: 0;}
+    #mobile-menu  em.level-two:after{display: none;}
+    #mobile-menu  em.level-two.toggled{transform: rotate(-180deg);-moz-transform: rotate(-180deg);-webkit-transform: rotate(-180deg)}
+    #mobile-menu  li a{color: #ae926c;padding: 9px 0px 9px 15px;display: block;margin-right: 30px;text-transform: uppercase;line-height: 20px;font-size: 15px;font-weight: 700;letter-spacing: 0.09em;font-family: "arial", sans-serif}
+    #mobile-menu  li li{border-color: rgb(72, 72, 69)}
+    #mobile-menu  li li a{text-transform: none;padding-left: 20px;}
+    #mobile-menu  li li li a{padding-left: 25px;margin-right: 0;}
+    #mobile-menu  li li li li a{padding-left: 30px;margin-right: 0;}
+    #mobile-menu  li a.active{color:#ECE4D8;}
+    .scroll-hidden{overflow: hidden;height: 100%;}
+
+    /*--------- home page ------------*/
+    /* banner part */
+
+}
+
+/* 2. iPad responsive css 768px to 1024px
+-----------------------------------------*/
+@media (min-width:768px) and (max-width:1024px) {
+
+    /* default  */
+    body{min-width: inherit;}
+    .container{width: 100%;padding-left: 13px;padding-right: 13px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+}
+
+/* 3. large desktop responsive css 1025px to 1200px
+----------------------------------------------------*/
+@media (min-width:1025px) and (max-width:1200px) {	
+
+}
+
+/* 4. Other media-query
+------------------------------------------------*/
+@media (max-width:480px){
+
+}
